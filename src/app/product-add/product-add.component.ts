@@ -23,7 +23,7 @@ export class ProductAddComponent implements OnInit {
   }
 
   addProduct(ProductName, ProductDescription, ProductPrice){
-    const data = JSON.stringify(this.angForm.value);
+    const data = this.angForm.value;
     console.log('hey', data);
     this.productService.addProduct(data);
   }
