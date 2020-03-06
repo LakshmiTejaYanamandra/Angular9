@@ -59,7 +59,7 @@ productRoutes.route('/update/:id').post(function (req, res) {
     });  
   });  
   // Defined delete | remove | destroy route  
-  productRoutes.route('/delete/:id').get(function (req, res) { e   
+  productRoutes.route('/delete/:id').get(function (req, res) {  
       Product.findByIdAndRemove({_id: req.params.id}, function(err, product){    
           if(err) res.json(err);  
           else res.json('Successfully removed');  
